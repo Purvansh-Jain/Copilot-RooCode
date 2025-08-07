@@ -1,70 +1,208 @@
-# GitHub Copilot & RooCode Training Plan
+# GitHub Copilot & RooCode Training Plan
 
-This document outlines a step‑by‑step training plan to enable offshore developers to use **GitHub Copilot** and **RooCode** effectively. It provides installation instructions, usage tips, links to videos and articles, and exercises to build confidence.
+This document outlines a structured training plan for developers to effectively use **GitHub Copilot** and **RooCode** for AI-assisted coding. It contains detailed installation instructions, usage guidance, prompt engineering best practices, hands-on training exercises, and curated resources.
+
+Offshore development teams can use this document to integrate Copilot or RooCode into their workflows and enhance productivity.
+
+---
 
 ## 1. Introduction
 
-Developers across the globe are expected to use AI assistance to increase productivity. Many of our offshore developers have not yet integrated **Copilot** or **RooCode** into their daily workflows. The goal of this training is to bridge that gap.
+AI tools like GitHub Copilot and RooCode are revolutionizing software development by assisting with code generation, refactoring, documentation, testing, and more. However, many developers are unfamiliar with how to use these tools efficiently. This training plan is designed to guide them through the setup, usage, and optimization of these tools in their daily work.
 
-## 2. Installing and Enabling GitHub Copilot
+We focus on two primary tools:
 
-1. **Get Access** – Ensure your GitHub account has a Copilot subscription or is part of our enterprise licence.
-2. **Install the Extension** – In **Visual Studio Code**, open the Extensions view (`Ctrl+Shift+X`), search for **GitHub Copilot** and click **Install**.
-3. **Authenticate** – Sign into GitHub when prompted and enable Copilot for your account.
-4. **Enable in Your IDE** – After installation, you will see Copilot suggestions appear as ghost text. Accept a suggestion with `Tab`.
-5. **Copilot Chat (Optional)** – Copilot Chat allows conversational queries within VS Code. Install **GitHub Copilot Chat** extension from the marketplace and sign in.
+* **GitHub Copilot**: An AI coding assistant by GitHub and OpenAI.
+* **RooCode**: A privacy-preserving, offline-capable AI coding assistant that runs locally with support for custom models.
 
-More details can be found in GitHub’s official documentation and blog posts. For example, GitHub recommends that you set a high‑level goal in your prompt and break your ask into discrete steps for better results【364202183360539†L586-L616】. Keeping prompts simple and specific also improves Copilot’s response quality【364202183360539†L632-L656】.
+---
+
+## 2. Installing and Enabling GitHub Copilot
+
+GitHub Copilot provides autocomplete-style AI suggestions in VS Code based on natural language comments and code context. Here’s how to set it up and use it effectively:
+
+### A. Prerequisites
+
+* Ensure you have a GitHub account.
+* Subscribe to GitHub Copilot individually or ensure it’s enabled via your organization’s enterprise license.
+* Install [Visual Studio Code](https://code.visualstudio.com/).
+
+### B. Installation
+
+1. **Open VS Code**
+2. Press `Ctrl+Shift+X` to open the Extensions pane.
+3. Search for "GitHub Copilot" and click **Install**.
+
+### C. Authentication
+
+* Sign into GitHub when prompted.
+* Authorize the Copilot plugin to access your account.
+
+### D. Enable Copilot
+
+* Once installed, Copilot suggestions will appear as faded text while typing.
+* Press `Tab` to accept a suggestion.
+* You can disable or pause suggestions through the Copilot status bar icon.
+
+### E. GitHub Copilot Chat (Optional)
+
+1. Install **GitHub Copilot Chat** from the VS Code marketplace.
+2. This extension enables a ChatGPT-like sidebar in VS Code.
+3. Use it to ask questions, generate functions, refactor code, or understand code snippets.
+
+### F. Using Copilot Effectively
+
+* Use high-level natural language comments (e.g. `// Create a REST API in Express.js`) before writing code.
+* Copilot works better with context: include type hints, docstrings, or partial function names.
+* You can prompt it in comments, inline, or even use the chat window.
+
+### G. Copilot Limitations
+
+* It may not always generate optimal or secure code.
+* Always review and test the output.
+
+For further reading:
+
+* [GitHub Copilot Official Docs](https://docs.github.com/en/copilot)
+* [How to Write Better Prompts for GitHub Copilot](https://github.blog/2023-09-12-how-to-write-better-prompts-for-github-copilot/)
+
+---
 
 ## 3. Using RooCode
 
-1. **Install RooCode** – Download and install the **RooCode** extension from [roocode.com](https://roocode.com). Note that RooCode is open source and runs locally【443559697559150†L27-L52】.
-2. **Connect an AI Provider** – RooCode can connect to OpenAI, Azure OpenAI or your own local model. Configure your API key in RooCode’s settings.
-3. **Try Your First Task** – Use the command palette (Ctrl+Shift+P) and select **Roo Code: Run** to generate code, refactor or answer questions. RooCode supports multiple modes such as *Code*, *Architect* and *Doc* mode【780901266607041†L87-L123】.
-4. **Explore Prompts Across Files** – RooCode can read and write files, execute commands and provide PR summaries【443559697559150†L50-L62】.
-5. **Privacy & Control** – RooCode is transparent and local; none of your code is sent to a hosted service【443559697559150†L64-L70】.
+RooCode is a local-first alternative to GitHub Copilot that supports self-hosted models and private environments. Here’s how to install and use it:
+
+### A. Install RooCode Extension
+
+1. Visit [roocode.com](https://roocode.com) and download the VS Code extension.
+2. Install the extension manually or through the VS Code marketplace.
+
+### B. Connect to an AI Provider
+
+1. RooCode supports OpenAI, Azure OpenAI, or local models like Ollama.
+2. Go to **Settings > RooCode > API Provider** and enter your API key.
+3. For local models, configure your model and port (e.g., `http://localhost:11434/api`).
+
+### C. Try Your First Prompt
+
+* Press `Ctrl+Shift+P`, select **Roo Code: Run**.
+* Ask questions like "Refactor this function to use async/await" or "Generate tests for this class".
+* RooCode supports three modes:
+
+  * **Code Mode**: Generates and edits code.
+  * **Architect Mode**: High-level planning and scaffolding.
+  * **Doc Mode**: Documentation, comments, PR summaries.
+
+### D. Prompt Usage Across Files
+
+* RooCode can read the open folder and files.
+* It can edit files, navigate multiple tabs, and generate documentation.
+* Use it to summarize large files or explain architecture.
+
+### E. Privacy & Control
+
+* RooCode does not send data to external servers unless using OpenAI.
+* Local model support makes it ideal for sensitive projects.
+
+Learn more:
+
+* [RooCode Docs](https://roocode.com/docs)
+* [RooCode GitHub](https://github.com/roocode/roocode)
+
+---
 
 ## 4. Prompt Engineering Best Practices
 
-Successful AI assistance begins with clear prompts. GitHub recommends:
+Effective prompt engineering is essential to leverage Copilot and RooCode. Follow these practices:
 
-- **Set the stage with a high‑level goal** – Provide an overview of what you want to accomplish【364202183360539†L586-L616】.
-- **Keep it simple and specific** – Ask for one thing at a time; avoid ambiguous language【364202183360539†L632-L656】.
-- **Give examples** – Show one or two inputs and outputs so the AI understands your expectations【364202183360539†L658-L723】.
+### A. Set a Clear Objective
 
-When you struggle to articulate your prompt in English, use ChatGPT or another language model to refine your prompt. For example: *“Rephrase my prompt in clear, concise English and suggest missing details.”* This will help the AI generate better results.
+* Always start with a clear, concise instruction.
+* Example: `// Create a RESTful API for user registration using Express.js`
+
+### B. Keep It Simple
+
+* Break tasks into smaller, atomic prompts.
+* Avoid combining multiple asks in one line.
+
+### C. Be Specific with Examples
+
+* Show examples in comments or as context.
+* Copilot learns better when you show structure.
+
+### D. Iterate and Refine
+
+* If the output is unsatisfactory, modify your prompt or add more detail.
+
+### E. Use Chat Interfaces for Exploration
+
+* Tools like Copilot Chat and ChatGPT help you debug, paraphrase, or polish prompts.
+
+Example Prompt Improvements:
+
+* ❌ *"Make this code better"* → ✅ *"Optimize this loop using list comprehension in Python"*
+* ❌ *"Fix bug"* → ✅ *"Fix index out of range error in line 12 by checking array length"*
+
+More resources:
+
+* [GitHub Prompt Guide](https://github.blog/2023-09-12-how-to-write-better-prompts-for-github-copilot/)
+* [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
+
+---
 
 ## 5. Training Exercises
 
-Work through the following exercises using the **`training_repo`** provided in this package:
+Work through these exercises in the included `training_repo`:
 
-1. **Code Migration** – Open `legacy_code/Calculator.cs` and ask Copilot to refactor it to a modern C# pattern. Compare your results with `modern_code/Calculator.cs`.
-2. **Module Scaffolding** – Use the BRD in `requirements/BRD.md` to ask RooCode (or Copilot Chat) to scaffold a new calculator service. Evaluate the output and iterate on your prompt.
-3. **Unit Test Generation** – Provide the code of a class (e.g. `Calculator.cs`) and ask the AI to generate unit tests using xUnit or NUnit. Run the tests and review coverage.
-4. **Documentation and Diagrams** – Ask RooCode to generate Markdown documentation and a Mermaid diagram of the `Calculator` class. Discuss whether the output is accurate and where it can be improved.
+1. **Code Migration**
+
+   * Refactor `legacy_code/Calculator.cs` to use modern C# syntax.
+   * Compare with `modern_code/Calculator.cs`.
+
+2. **Module Scaffolding**
+
+   * Use the BRD in `requirements/BRD.md`.
+   * Ask RooCode or Copilot to scaffold a service module.
+
+3. **Unit Test Generation**
+
+   * Use the `Calculator.cs` file.
+   * Ask AI to generate NUnit/xUnit tests. Run and verify coverage.
+
+4. **Documentation & Diagrams**
+
+   * Ask RooCode to create markdown and mermaid diagrams.
+   * Review structure and clarity.
+
+---
 
 ## 6. Additional Resources
 
 ### Articles
-- **GitHub Blog – How to Write Better Prompts for GitHub Copilot** – covers best practices for crafting prompts【364202183360539†L586-L616】【364202183360539†L632-L656】【364202183360539†L658-L723】.
-- **Roo Code Documentation** – explains installation, modes and capabilities【780901266607041†L61-L75】【780901266607041†L87-L123】.
-- **We Are Founders – Roo Code Overview** – describes RooCode’s local/offline nature and privacy benefits【443559697559150†L27-L52】【443559697559150†L64-L70】.
+
+* [GitHub Blog – Better Prompts for Copilot](https://github.blog/2023-09-12-how-to-write-better-prompts-for-github-copilot/)
+* [RooCode Official Documentation](https://roocode.com/docs)
+* [We Are Founders – Roo Code Overview](https://wearefounders.substack.com/p/roocode)
 
 ### Videos (YouTube)
 
-The following videos provide visual walkthroughs of AI coding tools. Always verify dates and quality. Here are some recommended titles to search for:
+| Topic            | Video Title                                         | Link                                                 | Description                               |
+| ---------------- | --------------------------------------------------- | ---------------------------------------------------- | ----------------------------------------- |
+| Copilot Beginner | *How to Use GitHub Copilot (Beginner's Guide)*      | [Watch](https://www.youtube.com/watch?v=GXFGWh5X4rQ) | Basic install and use                     |
+| Copilot Tips     | *Get the Most Out of GitHub Copilot – ng-conf 2024* | [Watch](https://www.youtube.com/watch?v=rzT5Jmj6tUw) | Tips on refactoring, reviewing, prompting |
+| RooCode Setup    | *Installing Roo Code in VS Code*                    | [Watch](https://www.youtube.com/watch?v=pOVDM6gqGJM) | Install + config guide                    |
+| RooCode Features | *Roo Code is AMAZING – AI VSCode Extension*         | [Watch](https://www.youtube.com/watch?v=b8Ldk3OTa2w) | Showcases Architect and Doc mode          |
 
-| Topic | Video Title (YouTube) | Description |
-|------|----------------------|-------------|
-| **Copilot Beginner Guide** | *How to Use GitHub Copilot (Beginner's Guide)* | Demonstrates installation and basic usage of Copilot in VS Code. |
-| **Copilot Tips & Tricks** | *Get the Most Out of GitHub Copilot* (ng‑conf 2024 talk) | Offers practical tips on prompting, refactoring and code review. |
-| **RooCode Setup** | *Installing Roo Code in VS Code – Quick Setup Tutorial* | Shows how to install and configure RooCode with your own model. |
-| **RooCode Features** | *Roo Code is AMAZING – AI VSCode Extension* | Highlights different modes and how to automate tasks. |
+---
 
 ## 7. Next Steps
 
-1. **Complete the exercises** and record any questions or issues you encounter.
-2. **Share feedback** with the training coordinators so the materials can be improved.
-3. **Continue exploring** – Beyond Copilot and RooCode, investigate other AI tools and experiment with different prompt strategies.
+1. Complete all training exercises.
+2. Share feedback and pain points.
+3. Explore advanced topics such as:
 
-By following this plan, our offshore teams will develop confidence in using AI to accelerate their workflow. Over time, these tools will become part of their daily development process.
+   * Connecting RooCode to local LLMs
+   * Using vector databases (e.g., FAISS) with code search
+   * Prompt chaining with tools like LangChain
+
+With continued use and refinement, Copilot and RooCode can help teams code faster, document better, and onboard new members more efficiently.
