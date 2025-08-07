@@ -1,3 +1,4 @@
+
 # GitHub Copilot & RooCode Training Plan
 
 This document outlines a structured training plan for developers to effectively use **GitHub Copilot** and **RooCode** for AI-assisted coding. It contains detailed installation instructions, usage guidance, prompt engineering best practices, hands-on training exercises, and curated resources.
@@ -24,7 +25,7 @@ GitHub Copilot provides autocomplete-style AI suggestions in VS Code based on na
 ### A. Prerequisites
 
 * Ensure you have a GitHub account.
-* Subscribe to GitHub Copilot individually or ensure it’s enabled via your organization’s enterprise license.
+* Ensure your GitHub account is connected to the **Programmers.io organization** to enable enterprise license access.
 * Install [Visual Studio Code](https://code.visualstudio.com/).
 
 ### B. Installation
@@ -74,7 +75,7 @@ RooCode is a local-first alternative to GitHub Copilot that supports self-hosted
 
 ### A. Install RooCode Extension
 
-1. Visit [roocode.com](https://roocode.com) and download the VS Code extension.
+1. Visit [RooCode GitHub](https://github.com/RooCodeInc/Roo-Code) and download the VS Code extension.
 2. Install the extension manually or through the VS Code marketplace.
 
 ### B. Connect to an AI Provider
@@ -106,8 +107,8 @@ RooCode is a local-first alternative to GitHub Copilot that supports self-hosted
 
 Learn more:
 
-* [RooCode Docs](https://roocode.com/docs)
-* [RooCode GitHub](https://github.com/roocode/roocode)
+* [RooCode Docs](https://docs.roocode.com)
+* [RooCode GitHub](https://github.com/RooCodeInc/Roo-Code)
 
 ---
 
@@ -181,17 +182,17 @@ Work through these exercises in the included `training_repo`:
 ### Articles
 
 * [GitHub Blog – Better Prompts for Copilot](https://github.blog/2023-09-12-how-to-write-better-prompts-for-github-copilot/)
-* [RooCode Official Documentation](https://roocode.com/docs)
+* [RooCode Official Documentation](https://docs.roocode.com)
 * [We Are Founders – Roo Code Overview](https://wearefounders.substack.com/p/roocode)
 
 ### Videos (YouTube)
 
 | Topic            | Video Title                                         | Link                                                 | Description                               |
 | ---------------- | --------------------------------------------------- | ---------------------------------------------------- | ----------------------------------------- |
-| Copilot Beginner | *How to Use GitHub Copilot (Beginner's Guide)*      | [Watch](https://www.youtube.com/watch?v=GXFGWh5X4rQ) | Basic install and use                     |
+| Copilot Beginner | *How to Use GitHub Copilot (Beginner's Guide)*      | [Watch](https://www.youtube.com/watch?v=n0NlxUyA7FI) | Basic install and use                     |
 | Copilot Tips     | *Get the Most Out of GitHub Copilot – ng-conf 2024* | [Watch](https://www.youtube.com/watch?v=rzT5Jmj6tUw) | Tips on refactoring, reviewing, prompting |
-| RooCode Setup    | *Installing Roo Code in VS Code*                    | [Watch](https://www.youtube.com/watch?v=pOVDM6gqGJM) | Install + config guide                    |
-| RooCode Features | *Roo Code is AMAZING – AI VSCode Extension*         | [Watch](https://www.youtube.com/watch?v=b8Ldk3OTa2w) | Showcases Architect and Doc mode          |
+| RooCode Setup    | *RooCode v3.3 UPDATE: Free Autonomous Coding Agent* | [Watch](https://www.youtube.com/watch?v=PE-0P6SAZYc) | Install + config guide                    |
+| RooCode Features | *Roo Code is AMAZING – AI VSCode Extension*         | [Watch](https://www.youtube.com/watch?v=r5T3h0BOiWw) | Showcases Architect and Doc mode          |
 
 ---
 
